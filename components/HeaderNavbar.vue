@@ -9,7 +9,7 @@
                 </a>
               </li>
               <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                <a class="search-toggle no-pdd-right" >
                   <i class="search-icon ti-search pdd-right-10"></i>
                   <i class="search-icon-close ti-close pdd-right-10"></i>
                 </a>
@@ -18,6 +18,11 @@
                 <input class="form-control" type="text" placeholder="Search...">
               </li>
             </ul>
+
+
+
+
+
             <ul class="nav-right">
               <li class="notifications dropdown">
                 <span class="counter bgc-red">3</span>
@@ -92,6 +97,7 @@
                   </li>
                 </ul>
               </li>
+             
               <li class="notifications dropdown">
                 <span class="counter bgc-blue">3</span>
                 <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
@@ -180,34 +186,53 @@
                   </li>
                 </ul>
               </li>
-              <li class="dropdown">
-                <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
-                  <div class="peer mR-10">
-                    <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
-                  </div>
-                  <div class="peer">
-                    <span class="fsz-sm c-grey-900">John Doe</span>
-                  </div>
-                </a>
-                <ul class="dropdown-menu fsz-sm">
+               
+
+
+          
+      
+            
+            
+                 
+            
+             
+          
+          <b-dropdown size="lg"  variant="link" toggle-class="text-decoration-none" no-caret>
+              
+             
+                   <a @click="toggleVisibility" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" >
+                      <div class="peer mR-10">
+                          <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+                      </div>
+                      <div class="peer">
+                          <span class="fsz-sm c-grey-900">John Doe</span>
+                      </div>
+                   </a>
+            
+              <ul v-if="isVisible" class="dropdown-menu fsz-sm" >
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-settings mR-10"></i>
                       <span>Setting</span>
                     </a>
                   </li>
+                  
+                  
+                  
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-user mR-10"></i>
                       <span>Profile</span>
                     </a>
                   </li>
+                 
                   <li>
                     <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-email mR-10"></i>
                       <span>Messages</span>
                     </a>
                   </li>
+                 
                   <li role="separator" class="divider"></li>
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
@@ -215,8 +240,13 @@
                       <span>Logout</span>
                     </a>
                   </li>
+                
+                 
                 </ul>
-              </li>
+              </b-dropdown>
+
+             
+              
             </ul>
           </div>
         </div>
@@ -226,6 +256,18 @@
 <script>
     export default {
         name: "HeaderNavbar"
+      ,
+      data() {
+        return {
+          isVisible: false
+        }
+      },
+      methods:{
+        toggleVisibility(){
+          this.isVisible= !this.isVisible
+        }
+      }
+      
     }
 </script>
 

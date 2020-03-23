@@ -66,7 +66,8 @@
                 <span class="title">UI Elements</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+           
+            <li class="nav-item dropdown ">
                    
 							<a role="tab"  href="#" v-b-toggle.accordion-1 variant="info" class="dropdown-toggle">
                     <span class="icon-holder">
@@ -78,7 +79,7 @@
                     </span>
 							</a>
 				
-							<b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+							<b-collapse id="accordion-1"  accordion="my-accordion" role="tabpanel">
 									<b-card-body class="padding-0">
 										<ul class="dropdown-menu">
 												<li>
@@ -149,7 +150,8 @@
                   <i class="ti-angle-right"></i>
                 </span>
               </a>
-             		<b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+            
+            	<b-collapse id="accordion-2"  accordion="my-accordion" role="tabpanel">
 									<b-card-body class="padding-0">
                       <ul class="dropdown-menu">
                         <li class="nav-item dropdown">
@@ -158,20 +160,27 @@
                           </a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a >
+                          <a class="dropdown-toggle" role="tab"  href="#" v-b-toggle.accordion-2-inner variant="info">
                             <span>Menu Item</span>
                             <span class="arrow">
                               <i class="ti-angle-right"></i>
                             </span>
                           </a>
+                    <b-collapse id="accordion-2-inner"  accordion="my-accordion" role="tabpanel" class="mt-2">
+									      <b-card-body class="padding-0">
+                          
                           <ul class="dropdown-menu">
-                            <li>
-                              <a href="javascript:void(0);">Menu Item</a>
+                            <li >
+                            <a>Menu 1</a>
                             </li>
-                            <li>
-                              <a href="javascript:void(0);">Menu Item</a>
+                            <li >
+                             <a>Menu 2</a>
                             </li>
                           </ul>
+									      </b-card-body>
+                    </b-collapse>
+
+
                         </li>
                       </ul>
               	</b-card-body >
