@@ -21,7 +21,7 @@
     "cross-env": "^5.2.0",
     "datatables": "^1.10.13",
     "easy-pie-chart": "^2.1.7",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.6.2",
